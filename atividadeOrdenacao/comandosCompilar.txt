@@ -1,0 +1,12 @@
+__________________________________________________
+Compilar o algoritmo de Insertion Sort
+gcc insertSort.c -o insertSort
+
+Rodar o algoritmo com os diferentes arquivos lidos
+./insertSort num.1000.1.in 
+__________________________________________________
+Compilar o algoritmo de Selection Sort
+gcc selecSort.c -o selecSort
+
+Rodar o algoritmo com os diferentes arquivos lidos
+./selecSort num.1000.1.in
