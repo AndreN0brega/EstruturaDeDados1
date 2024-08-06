@@ -1,0 +1,7 @@
+__________________________________________________
+Compilar o programa
+	g++ main.cpp listaSequencial.cpp -o teste
+__________________________________________________
+Executar o programa de teste
+	g++ ./teste
+
