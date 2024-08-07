@@ -8,7 +8,12 @@ ListaEncadeada::ListaEncadeada(){
     cabeca = nullptr;
 }
 ListaEncadeada::~ListaEncadeada(){
-
+    No* aux = cabeca;
+    while(aux != nullptr){
+        No* prox = aux->prox;
+        delete aux;
+        aux = prox;
+    }
 }
 
 bool ListaEncadeada::vazia(){
@@ -91,7 +96,7 @@ void ListaEncadeada::exibir(){
     
     No* aux = cabeca;
 
-    for (int i = 0; i < tamAtual; i++) {
+    for(int i = 0; i < tamAtual; i++){
         cout << aux->dado;
         aux = aux->prox;
         if(i < tamAtual - 1){
