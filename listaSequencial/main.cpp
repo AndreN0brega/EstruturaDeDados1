@@ -3,7 +3,6 @@
 
 int main() {
     ListaSequencial lista;
-    int pos;
 
     cout << "Lista esta vazia? ";
     if(lista.vazia())
