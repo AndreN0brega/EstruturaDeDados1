@@ -2,6 +2,8 @@
 #include "filaSequencial.h"
 
 FilaSequencial::FilaSequencial(){
+    inicio = 0;
+    fim = -1;
     tamAtual = 0;
     tamMax = 144;
 }
@@ -16,54 +18,31 @@ bool FilaSequencial::cheia(){
 int FilaSequencial::tamanho(){
     return tamAtual;
 }
-int FilaSequencial::elemento(int pos){
-    if (pos < 1 || pos > tamAtual){
+
+int FilaSequencial::primeiro(){
+    if(vazia())
         return -1;
-    }
-    
-    return dados[pos -1];
+
+    return dados[inicio];
 }
 
-bool FilaSequencial::modificar(int pos, int dado){
-    if (pos < 1 || pos > tamAtual){
-        return false;
-    }
-    dados[pos - 1] = dado;
-
-    return true;
-}
-int FilaSequencial::procurarPos(int dado){
-    for (int i = 0; i < tamAtual; i++){
-        if (dados[i] == dado) {
-            return i + 1;
-        }
-    }
-    return -1;
-}
-
-bool FilaSequencial::inserir(int pos, int dado){
+bool FilaSequencial::inserir(int dado){
     if (cheia()){
         return false;
     }
-    if (pos < 1 || pos > tamAtual + 1){
-        return false;
-    }
-    for (int i = tamAtual; i >= pos; i--){
-        dados[i] = dados[i - 1];
-    }
-    dados[pos - 1] = dado;
+
+    fim = (fim + 1) % tamMax;
+    dados[fim] = dado;
     tamAtual++;
 
     return true;
 }
-int FilaSequencial::remover(int pos){
-    if (pos < 1 || pos > tamAtual){
+int FilaSequencial::remover(){
+    if(vazia())
         return -1;
-    }
-    int dado = dados[pos - 1];
-    for (int i = pos - 1; i < tamAtual - 1; i++){
-        dados[i] = dados[i + 1];
-    }
+
+    int dado = primeiro();
+    inicio = (inicio + 1) % tamMax;
     tamAtual--;
 
     return dado;
@@ -71,15 +50,13 @@ int FilaSequencial::remover(int pos){
 
 void FilaSequencial::exibir(){
     if (vazia()) {
-        cout << "A lista está vazia." << endl;
+        cout << "A fila está vazia." << endl;
         return;
     }
-    cout << "Elementos da lista: [";
+    cout << "Elementos da fila: [";
     for (int i = 0; i < tamAtual; i++) {
-        cout << dados[i];
-        if(i < tamAtual - 1){
-            cout << ", ";
-        }
+        int indice = (inicio + i) % tamMax;
+        cout << dados[i] << " ";
     }
     cout << "]"<< endl;
 }

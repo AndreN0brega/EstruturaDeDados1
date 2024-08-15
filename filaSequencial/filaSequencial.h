@@ -7,6 +7,8 @@ class FilaSequencial {
         int dados[144];
         int tamAtual;
         int tamMax;
+        int inicio;
+        int fim;
 
     public:
         FilaSequencial();
@@ -14,10 +16,8 @@ class FilaSequencial {
         bool vazia();
         bool cheia();
         int tamanho();
-        int elemento(int pos);
-        bool modificar(int pos, int dado);
-        int procurarPos(int dado);
-        bool inserir(int pos, int dado);
-        int remover(int pos);
+        int primeiro();
+        bool inserir(int dado);
+        int remover();
         void exibir();
 };
