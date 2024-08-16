@@ -10,43 +10,38 @@ int main() {
     else
         cout << "Nao" << endl;    
 
-    if(fila.inserir(1, 4))
-        cout << "Elemento inserido com sucesso" << endl;
+    if(fila.inserir(4))
+        cout << "Elemento inserido no final com sucesso" << endl;
     else
         cout << "Falha ao inserir o elemento" << endl;
     fila.exibir();
-    if(fila.inserir(2, 33))
-        cout << "Elemento inserido com sucesso" << endl;
+    if(fila.inserir(33))
+        cout << "Elemento inserido no final com sucesso" << endl;
     else
         cout << "Falha ao inserir o elemento" << endl;
     fila.exibir();
-    if(fila.inserir(6, 7))
-        cout << "Elemento inserido com sucesso" << endl;
+    if(fila.inserir(7))
+        cout << "Elemento inserido no final com sucesso" << endl;
     else
         cout << "Falha ao inserir o elemento" << endl;
     fila.exibir();
-    if(fila.inserir(1, 42))
-        cout << "Elemento inserido com sucesso" << endl;
+    if(fila.inserir(42))
+        cout << "Elemento inserido no final com sucesso" << endl;
     else
         cout << "Falha ao inserir o elemento" << endl;
     fila.exibir();
 
     cout << "Tamanho da lista: " << fila.tamanho() << endl;
 
-    cout << "Removendo o elemento " << fila.remover(2) << " da posicao 2" << endl;
+    cout << "Removendo um elemento do inicio, que foi: " << fila.remover() << endl;
+    fila.exibir();
+    cout << "Removendo um elemento do inicio, que foi: " << fila.remover() << endl;
     fila.exibir();
     cout << "Tamanho da lista: " << fila.tamanho() << endl;
 
 
     fila.exibir();
-    cout << "Posicao do elemento 33: " << fila.procurarPos(33) << endl;
-    cout << "Elemento da posicao 1:  " << fila.elemento(1) << endl;
-
-    if(fila.modificar(1,7))
-        cout << "Elemento da posicao 1 modificado por 7" << endl;
-    else
-        cout << "Elemento da posicao 1 nao pode ser modificado" << endl;
-    fila.exibir();    
+    cout << "Primeiro elemento: " << fila.primeiro() << endl;  
 
     cout << "Lista esta cheia? ";
     if(fila.cheia())

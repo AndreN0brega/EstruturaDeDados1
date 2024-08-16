@@ -1,7 +1,6 @@
 __________________________________________________
 Compilar o programa
-	g++ main.cpp 
+	g++ main.cpp filaSequencial.cpp -o teste
 __________________________________________________
 Executar o programa de teste
-	g++ ./
-
+	g++ ./teste

@@ -56,7 +56,9 @@ void FilaSequencial::exibir(){
     cout << "Elementos da fila: [";
     for (int i = 0; i < tamAtual; i++) {
         int indice = (inicio + i) % tamMax;
-        cout << dados[i] << " ";
+        cout << dados[indice];
+        if(indice != fim)
+            cout << ", ";
     }
     cout << "]"<< endl;
 }
