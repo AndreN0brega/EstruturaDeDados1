@@ -5,7 +5,7 @@ FilaSequencial::FilaSequencial(){
     inicio = 0;
     fim = -1;
     tamAtual = 0;
-    tamMax = 144;
+    tamMax = 7;
 }
 
 bool FilaSequencial::vazia(){

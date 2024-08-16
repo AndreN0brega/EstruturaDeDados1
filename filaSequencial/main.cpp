@@ -38,9 +38,33 @@ int main() {
     cout << "Removendo um elemento do inicio, que foi: " << fila.remover() << endl;
     fila.exibir();
     cout << "Tamanho da lista: " << fila.tamanho() << endl;
-
-
+    
+    if(fila.inserir(77))
+        cout << "Elemento inserido no final com sucesso" << endl;
+    else
+        cout << "Falha ao inserir o elemento" << endl;
     fila.exibir();
+    if(fila.inserir(12))
+        cout << "Elemento inserido no final com sucesso" << endl;
+    else
+        cout << "Falha ao inserir o elemento" << endl;
+    fila.exibir();
+    if(fila.inserir(70))
+        cout << "Elemento inserido no final com sucesso" << endl;
+    else
+        cout << "Falha ao inserir o elemento" << endl;
+    fila.exibir();
+    if(fila.inserir(20))
+        cout << "Elemento inserido no final com sucesso" << endl;
+    else
+        cout << "Falha ao inserir o elemento" << endl;
+    fila.exibir();
+    if(fila.inserir(123))
+        cout << "Elemento inserido no final com sucesso" << endl;
+    else
+        cout << "Falha ao inserir o elemento" << endl;
+    fila.exibir();
+
     cout << "Primeiro elemento: " << fila.primeiro() << endl;  
 
     cout << "Lista esta cheia? ";

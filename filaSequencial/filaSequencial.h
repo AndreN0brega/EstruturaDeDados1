@@ -4,7 +4,7 @@ using namespace std;
 
 class FilaSequencial {
     private:
-        int dados[144];
+        int dados[7];
         int tamAtual;
         int tamMax;
         int inicio;
